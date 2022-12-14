@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        * {
+          box-sizing: border-box;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        /* Create two equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 50%;
+          padding: 10px;
+          height: 300px; /* Should be removed. Only for demonstration */
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+          display: flex;
+          justify-content: space-between;
+          width: 60%;
+          margin: .5rem;
+        }
+        
+        
+        </style>
+</head>
+<body>
+    <form action="result.html">
+        <header>
+            <h1>Practice</h1>
+        </header>
+        <div class="baslik">
+            <h3>Asagidaki formu olusturunuz.En uygun sekilde form validasyonu yapiniz.</h3>
+        </div>
+        <div class="row">
+                <div class="column">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" id="firstname" name="firstname" value=""> <br><br>
+                    <label for="lastname">Lastname</label>
+                    <input type="text" id="lastname" name="lastname" value=""><br><br>
+                    <label for="gender">Gender</label>
+                    <label for="man">Man</label>
+                    <input type="radio" id="man" name="gender" value="man" checked>
+                    <label for="woman">Woman</label>
+                    <input type="radio" id="woman" name="gender" value="woman"><br><br>
+                    <label for="city">City</label>
+                    <select name="city" id="city">
+                        <option value="Frankfurt">Frankfurt</option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Hamburg">Hamburg</option>
+                    </select><br><br>
+                    <label for="email">Enter your email</label>
+                    <input type="email" name="email" value="" id="email"><br><br>
+                    <label for="website">Your Website</label>
+                    <input type="text" id="website" name="website" value=""><br><br>
+                    <label for="phone">Your Phonenumber</label>
+                    <input type="tel" name="tel" id="tel" placeholder="0172-555-55-55" 
+                        pattern="[0-9]{4}-[0-9]{3}-[0-9]{2}-[0-9]{2}-">
+                        <br><br>
+                </div>
+            <div class="column">
+                <div class="hobby">
+                    <label for="hoby">Hobbies</label><br>
+                    <label for="Football">Football</label>
+                    <input type="checkbox" name="hobby" id="Football" value="football"><br>
+                    <label for="Basketball">Basketball</label>
+                    <input type="checkbox" name="hobby" value="Basketball" id="Basketball"><br>
+                    <label for="Volleyball">Volleyball</label>
+                    <input type="checkbox" name="hobby" value="Volleyball" id="Volleyball"><br><br>
+                </div>
+                <label for="foto">Your profile foto</label>
+                <input type="file" name="foto" id="foto"><br><br>
+                <label for="date">Birthday</label>
+                <input type="date" name="birthdate" id="date"><br><br>
+                <label for="adress">Adress</label>
+                <input type="comment" name="adres" value="" id="adress" maxlength="200"><br><br>
+                <input type="submit" >
+            </div>
+   
+        </div>
+    </form>
+</body>
+</html>
